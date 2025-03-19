@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import com.webservices.courseudemy.entities.Category;
 import com.webservices.courseudemy.repositories.CategoryRepository;
 
+
 @Service
 public class CategoryService {
+	
 	@Autowired
 	private CategoryRepository repository;
 	

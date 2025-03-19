@@ -6,4 +6,5 @@ import com.webservices.courseudemy.entities.OrderItem;
 
 public interface OrderItemRepository extends JpaRepository<OrderItem, Long> {
 	
+	
 }

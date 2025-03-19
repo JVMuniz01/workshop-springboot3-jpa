@@ -19,6 +19,7 @@ import jakarta.persistence.Table;
 public class Category implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -38,11 +39,11 @@ public class Category implements Serializable {
 		this.name = name;
 	}
 
-	public Long getId() {
+	public Long getIdLong() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setIdLong(Long id) {
 		this.id = id;
 	}
 
@@ -53,7 +54,8 @@ public class Category implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Set<Product> getProducts() {
+	
+	public Set<Product> getProducts(){
 		return products;
 	}
 
@@ -73,7 +75,5 @@ public class Category implements Serializable {
 		Category other = (Category) obj;
 		return Objects.equals(id, other.id);
 	}
-
-
 	
 }

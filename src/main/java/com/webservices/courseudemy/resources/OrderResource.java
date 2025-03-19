@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.webservices.courseudemy.entities.Order;
 import com.webservices.courseudemy.services.OrderService;
 
-
 @RestController
 @RequestMapping(value = "/orders")
 public class OrderResource {
