@@ -1,34 +1,21 @@
 package com.webservices.courseudemy.dto;
 
-public class CategoryDTO {
-	
-	private Long id;
-    private String name;
+import com.webservices.courseudemy.entities.Category;
+
+public record CategoryDTO(
+    Long id,
+    String name
+) {
     
-    public CategoryDTO() {
-    	
+	public CategoryDTO() {
+        this(null, null);
     }
-
-	public CategoryDTO(Long id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
     
+    // Método de fábrica para conversão de entidade
+    public static CategoryDTO fromEntity(Category category) {
+        return new CategoryDTO(
+            category.getIdLong(),
+            category.getName()
+        );
+    }
 }

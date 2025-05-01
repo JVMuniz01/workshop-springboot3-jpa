@@ -81,7 +81,7 @@ public class Order implements Serializable {
 	}
 	
 	@JsonIgnore
-	public Set<OrderItem> getItem(){
+	public Set<OrderItem> getItems(){
 		return items;
 	}
 	
