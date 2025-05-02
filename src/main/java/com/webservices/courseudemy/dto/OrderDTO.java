@@ -10,6 +10,7 @@ import com.webservices.courseudemy.entities.enums.OrderStatus;
 public record OrderDTO(Long id,
 	    Instant moment,
 	    OrderStatus orderStatus,
+	    UserDTO client,
 	    List<OrderItemDTO> items
 	    ) {
 
@@ -17,7 +18,8 @@ public record OrderDTO(Long id,
         return new OrderDTO(
             order.getId(),
             order.getMoment(),
-            order.getOrderStatus(),           
+            order.getOrderStatus(),
+            UserDTO.fromEntity(order.getClient()),
             order.getItems().stream()
                 .map(OrderItemDTO::fromEntity)
                 .collect(Collectors.toList())

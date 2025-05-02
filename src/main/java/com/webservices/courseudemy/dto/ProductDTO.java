@@ -12,9 +12,6 @@ public record ProductDTO(Long id,
 	    String imgUrl,
 	    Set<CategoryDTO> categories){
 	
-	public String getFormattedPrice() {
-        return String.format("$%.2f", price);
-    }
 	public static ProductDTO fromEntity(Product product) {
         return new ProductDTO(
             product.getId(),
