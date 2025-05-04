@@ -11,7 +11,8 @@ public record OrderDTO(Long id,
 	    Instant moment,
 	    OrderStatus orderStatus,
 	    UserDTO client,
-	    List<OrderItemDTO> items
+	    List<OrderItemDTO> items,
+	    Double total
 	    ) {
 
 	public static OrderDTO fromEntity(Order order) {
@@ -22,7 +23,8 @@ public record OrderDTO(Long id,
             UserDTO.fromEntity(order.getClient()),
             order.getItems().stream()
                 .map(OrderItemDTO::fromEntity)
-                .collect(Collectors.toList())
+                .collect(Collectors.toList()),
+                order.getTotal()
             
         );
 	}
