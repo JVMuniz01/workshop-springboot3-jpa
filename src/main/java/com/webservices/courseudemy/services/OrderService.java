@@ -34,15 +34,16 @@ public class OrderService {
     
     // Método para carregar os itens explicitamente
     @Transactional
-    public Order findByIdWithItems(Long id) {
+    public OrderDTO findByIdWithItems(Long id) {
         Order order = repository.findById(id)
             .orElseThrow(() -> new RuntimeException("Order not found"));
         
-        // Força o carregamento dos itens
-        order.getItems().size(); 
-        Hibernate.initialize(order.getClient());
         Hibernate.initialize(order.getItems());
+        order.getItems().forEach(item -> {
+            Hibernate.initialize(item.getProduct());
+            Hibernate.initialize(item.getProduct().getCategories());
+        });
         
-        return order;
+        return OrderDTO.fromEntity(order);
     }
 }

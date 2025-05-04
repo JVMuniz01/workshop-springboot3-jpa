@@ -35,15 +35,15 @@ public class ProductService {
     private ProductDTO convertToProductDTO(Product product) {
         Set<CategoryDTO> categoryDTOs = product.getCategories().stream()
             .map(category -> new CategoryDTO(category.getIdLong(), category.getName()))
-            .collect(Collectors.toSet());
-            
+            .collect(Collectors.toSet());         
         return new ProductDTO(
             product.getId(),
             product.getname(),
             product.getDescription(),
             product.getPrice(),
             product.getImgUrl(),
-            categoryDTOs
+            categoryDTOs,
+            product.getOrders()
         );
     }
 }
