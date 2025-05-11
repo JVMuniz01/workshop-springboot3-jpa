@@ -3,7 +3,6 @@ package com.webservices.courseudemy.dto;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.webservices.courseudemy.entities.Order;
 import com.webservices.courseudemy.entities.Product;
 
 public record ProductDTO(Long id,
@@ -12,7 +11,7 @@ public record ProductDTO(Long id,
 	    Double price,
 	    String imgUrl,
 	    Set<CategoryDTO> categories,
-	    Set<Order>orders){
+	    Set<OrderDTO>orders){
 	
 	public static ProductDTO fromEntity(Product product) {
         return new ProductDTO(
@@ -24,7 +23,7 @@ public record ProductDTO(Long id,
             product.getCategories().stream()
                 .map(CategoryDTO::fromEntity)
                 .collect(Collectors.toSet()),
-                product.getOrders()
+                product.getOrders().stream().map(OrderDTO::fromEntity).collect(Collectors.toSet())
         );
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.webservices.courseudemy.dto.CategoryDTO;
+import com.webservices.courseudemy.dto.OrderDTO;
 import com.webservices.courseudemy.dto.ProductDTO;
 import com.webservices.courseudemy.entities.Product;
 import com.webservices.courseudemy.repositories.ProductRepository;
@@ -43,7 +44,7 @@ public class ProductService {
             product.getPrice(),
             product.getImgUrl(),
             categoryDTOs,
-            product.getOrders()
-        );
+            product.getOrders().stream().map(OrderDTO::fromEntity).collect(Collectors.toSet())
+            );
     }
 }

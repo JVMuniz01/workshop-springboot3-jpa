@@ -7,9 +7,6 @@ public record CategoryDTO(
     String name
 ) {
     
-	public CategoryDTO() {
-        this(null, null);
-    }
     
     // Método de fábrica para conversão de entidade
     public static CategoryDTO fromEntity(Category category) {
