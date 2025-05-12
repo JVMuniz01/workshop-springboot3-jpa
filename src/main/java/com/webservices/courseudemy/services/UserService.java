@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.webservices.courseudemy.dto.UserDTO;
 import com.webservices.courseudemy.entities.User;
 import com.webservices.courseudemy.repositories.UserRepository;
+import com.webservices.courseudemy.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class UserService {
@@ -21,7 +22,7 @@ public class UserService {
 	
 	public User findById(Long id){
 		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 		
 	}
 	
