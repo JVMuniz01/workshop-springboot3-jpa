@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.webservices.courseudemy.dto.UserDTO;
 import com.webservices.courseudemy.entities.User;
 import com.webservices.courseudemy.repositories.UserRepository;
 
@@ -31,5 +32,18 @@ public class UserService {
 	public void delete (Long id) {
 		repository.deleteById(id);
 		
+	}
+	public User update(Long id, UserDTO dto) {
+		User entity = repository.findById(id).orElseThrow();;
+		updateData(entity, dto);
+		return repository.save(entity);
+		}
+
+
+	private void updateData(User entity, UserDTO dto) {
+	    entity.setName(dto.name());
+	    entity.setEmail(dto.email());
+	    entity.setPhone(dto.phone());
+	    entity.setPassword(dto.password());
 	}
 }
