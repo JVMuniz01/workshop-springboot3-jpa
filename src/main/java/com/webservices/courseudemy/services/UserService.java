@@ -1,6 +1,7 @@
 package com.webservices.courseudemy.services;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +46,15 @@ public class UserService {
 		
 	}
 	public User update(Long id, UserDTO dto) {
-		User entity = repository.findById(id).orElseThrow();;
-		updateData(entity, dto);
-		return repository.save(entity);
+		try {
+			User entity = repository.findById(id).orElseThrow();;
+			updateData(entity, dto);
+			return repository.save(entity);
+		} catch (NoSuchElementException e) {
+
+			throw new ResourceNotFoundException(id);
+
+		}
 		}
 
 
