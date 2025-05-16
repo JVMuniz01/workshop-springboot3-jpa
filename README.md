@@ -2,7 +2,7 @@
 
 Este projeto é um sistema de web services RESTful para um e-commerce simples, desenvolvido com Java 17, Spring Boot, JPA/Hibernate e banco de dados PostgreSQL (produção) e H2 (teste).
 
-📌 Objetivos
+<h2>📌 Objetivos</h2>
 
 Criar um projeto backend em Java com Spring Boot
 
@@ -18,7 +18,7 @@ Tratar exceções com retorno customizado
 
 Realizar o deploy da aplicação na nuvem
 
-🧱 Tecnologias e Dependências
+<h2>🧱 Tecnologias e Dependências</h2>
 
 Java 17
 
@@ -35,8 +35,7 @@ PostgreSQL (produção)
 Maven
 
 
-📂 Estrutura de Camadas
-
+<h2>📂 Estrutura de Camadas</h2>
 Entities (Modelo de Domínio): User, Order, Product, Category, OrderItem, Payment
 
 Repositories: interfaces JPA para acesso ao banco
@@ -49,8 +48,7 @@ Exceptions: tratamento customizado de erros
 
 
 
-🔀 Principais Funcionalidades
-
+<h2>🔀 Principais Funcionalidades</h2>
 📋 CRUD de usuários
 
 🛍️ Cadastro e relacionamento de pedidos, produtos e categorias
