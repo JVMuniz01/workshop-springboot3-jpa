@@ -1,68 +1,63 @@
-<h1>💼 Projeto E-commerce com Spring Boot, JPA e Hibernate</h1>
+<h1>💼 E-Commerce Project with Spring Boot, JPA & Hibernate</h1>
 
-Este projeto é um sistema de web services RESTful para um e-commerce simples, desenvolvido com Java 17, Spring Boot, JPA/Hibernate e banco de dados PostgreSQL (produção) e H2 (teste).
+This project is a RESTful web services system for a simple e-commerce platform, developed with Java 17, Spring Boot, JPA/Hibernate, and PostgreSQL (production) / H2 (testing) databases.
 
-<h2>📌 Objetivos</h2>
+<h2>📌 Objectives</h2>
+Create a Java backend project using Spring Boot
 
-Criar um projeto backend em Java com Spring Boot
+Model the domain for an order/product management system
 
-Modelar o domínio de um sistema de pedidos e produtos
+Implement resource, service, and repository layers
 
-Implementar as camadas resource, service e repository
+Perform CRUD operations
 
-Realizar operações CRUD
+Configure execution profiles (test, dev, prod)
 
-Configurar perfis de execução (test, dev, prod)
+Implement custom exception handling
 
-Tratar exceções com retorno customizado
+Deploy the application to cloud
 
-Realizar o deploy da aplicação na nuvem
-
-<h2>🧱 Tecnologias e Dependências</h2>
-
+<h2>🧱 Technologies & Dependencies</h2>
 Java 17
 
 Spring Boot 3.x
 
-Web
+Spring Web
 
-Data JPA
+Spring Data JPA
 
-H2 Database (teste)
+H2 Database (testing)
 
-PostgreSQL (produção)
+PostgreSQL (production)
 
 Maven
 
+<h2>📂 Layer Architecture</h2>
+Entities (Domain Model): User, Order, Product, Category, OrderItem, Payment
 
-<h2>📂 Estrutura de Camadas</h2>
-Entities (Modelo de Domínio): User, Order, Product, Category, OrderItem, Payment
+Repositories: JPA interfaces for database access
 
-Repositories: interfaces JPA para acesso ao banco
+Services: Business logic
 
-Services: lógica de negócio
+Resources (Controllers): RESTful endpoints
 
-Resources (Controllers): endpoints RESTful
+Exceptions: Custom error handling
 
-Exceptions: tratamento customizado de erros
+<h2>🔀 Key Features</h2>
+📋 User CRUD operations
 
+🛍️ Order/product/category registration and relationships
 
+💳 Payment-order association
 
-<h2>🔀 Principais Funcionalidades</h2>
-📋 CRUD de usuários
+📦 Order item management with quantity and price control
 
-🛍️ Cadastro e relacionamento de pedidos, produtos e categorias
+📅 ISO 8601 date formatting
 
-💳 Associação de pagamento com pedido
+🔒 Global exception handling
 
-📦 Controle de itens de pedido com quantidade e preço
+🔐 JWT security
 
-📅 Datas em formato ISO 8601
+JWT secret and expiration configuration
 
-🔒 Tratamento global de exceções
-
-🔐 Segurança com JWT
-
-Configuração de jwt.secret e jwt.expiration
-
-Uso futuro para autenticação/autorizacão via tokens
+Future implementation for token-based authentication/authorization
