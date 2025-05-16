@@ -1,4 +1,4 @@
-💼 Projeto E-commerce com Spring Boot, JPA e Hibernate
+<h1>💼 Projeto E-commerce com Spring Boot, JPA e Hibernate</h1>
 
 Este projeto é um sistema de web services RESTful para um e-commerce simples, desenvolvido com Java 17, Spring Boot, JPA/Hibernate e banco de dados PostgreSQL (produção) e H2 (teste).
 
