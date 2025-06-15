@@ -24,15 +24,15 @@ Deploy the application to cloud
 ```bash
 git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 ```
-Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev:
-`spring.profiles.active=dev`
-
 ### 2. Check Configuration and run 
 
 ```bash
 cd workshop-springboot3-jpa
 ```
 Open the `application.properties` or application.yml file and make sure it's set to use a local test environment. 
+
+### 3. Run
+
 ```bash
 ./mvnw spring-boot:run
 ```
