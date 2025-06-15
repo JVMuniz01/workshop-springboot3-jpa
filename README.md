@@ -21,8 +21,11 @@ Deploy the application to cloud
 <p> Na pasta que deseja alocar o projeto:</p>
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 ```
+
+<p>Verifique se o arquivo `application.properties` está configurado corretamente: `spring.profiles.active=dev
+`</p>
 
 <h2>🧱 Technologies & Dependencies</h2>
 Java 17
