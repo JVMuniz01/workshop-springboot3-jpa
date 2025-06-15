@@ -19,7 +19,7 @@ Deploy the application to cloud
 
 <h2> ## 🚀How to use</h2>
 
-### 1. Clone o Repositório
+### 1. Clone the repository
 
 ```bash
 git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
@@ -27,12 +27,12 @@ git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev:
 `spring.profiles.active=dev`
 
-### 2. Acesse a pasta do projeto e rode-o 
+### 2. Check Configuration and run 
 
 ```bash
 cd workshop-springboot3-jpa
 ```
-dentro da pasta do projeto digite: 
+Open the `application.properties` or application.yml file and make sure it's set to use a local test environment. 
 ```bash
 ./mvnw spring-boot:run
 ```
