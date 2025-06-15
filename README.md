@@ -17,8 +17,9 @@ Implement custom exception handling
 
 Deploy the application to cloud
 
-<h2>How to use</h2>
-<p> Na pasta que deseja alocar o projeto:</p>
+<h2> ## 🚀How to use</h2>
+
+### 1. Clone o Repositório
 
 ```bash
 git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
