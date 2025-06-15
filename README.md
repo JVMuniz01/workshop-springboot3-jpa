@@ -26,6 +26,17 @@ git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev:
 `spring.profiles.active=dev`
 
+```bash
+cd workshop-springboot3-jpa
+```
+dentro da pasta do projeto digite: 
+```bash
+./mvnw spring-boot:run
+```
+Teste o CRUD pelo postman ou pelo Swagger, acessando:
+```navegador
+http://localhost:8080/swagger-ui/index.html
+```
 
 <h2>🧱 Technologies & Dependencies</h2>
 Java 17
