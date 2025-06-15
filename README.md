@@ -18,6 +18,7 @@ Implement custom exception handling
 Deploy the application to cloud
 
 <h2>How to use</h2>
+<p> Na pasta que deseja alocar o projeto:</p>
 
 ```bash
 git clone https://github.com/seu-usuario/seu-projeto.git
