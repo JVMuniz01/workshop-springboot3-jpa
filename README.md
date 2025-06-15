@@ -27,6 +27,8 @@ git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev:
 `spring.profiles.active=dev`
 
+### 2. Acesse a pasta do projeto e rode-o 
+
 ```bash
 cd workshop-springboot3-jpa
 ```
