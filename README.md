@@ -23,7 +23,8 @@ Deploy the application to cloud
 ```bash
 git clone git@github.com:JVMuniz01/workshop-springboot3-jpa.git
 ```
-Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev
+Verifique se o arquivo `application.properties` está devidamente configurado para o perfil dev:
+`spring.profiles.active=dev`
 
 
 <h2>🧱 Technologies & Dependencies</h2>
