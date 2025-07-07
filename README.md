@@ -85,3 +85,7 @@ Exceptions: Custom error handling
 JWT secret and expiration configuration
 
 Future implementation for token-based authentication/authorization
+
+## 📜 Licença
+
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE).
